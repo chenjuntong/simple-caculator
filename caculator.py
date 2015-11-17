@@ -1,4 +1,4 @@
-##输入处理
+##1.输入处理
 # 输入字符处理
 class Buffer(object):
   def __init__(self,data):
@@ -16,8 +16,7 @@ class Buffer(object):
   def advance(self):
     self.offset += 1
 
-##生成Token列表
-
+##2.生成Token列表
 class Token(object):
   def consume(self,buffer):
     pass
@@ -69,3 +68,38 @@ def tokenize(string):
       raise ValueError("Error in syntax")
 
   return tokens
+
+##3. 生成表达式树
+# 表达式二叉树的节点
+class Node(object):
+  pass
+
+# 整数节点
+class IntNode(Node):
+  def __init__(self,value):
+    self.value = value
+
+# 操作符节点 (+ 或 -)
+class BinaryOpNode(Node):
+  def __init__(self,kind):
+    self.kind = kind
+    self.left = None # 左节点
+    self.right = None # 右节点
+
+# 从Token列表生成表达式二叉树
+def parse(tokens):
+  if tokens[0][0] != 'int':
+    raise ValueError("Must start with an int")
+  #取出tokens[0]，该Token类型为整数
+  node = IntNode(tokens[0][1])
+  nbo = None
+  last = tokens[0][0]
+  #从第二个Token开始循环取出
+  for token in tokens[1:]:
+    #相邻两个Token的类型一样则为错误
+    if token[0] == last:
+      raise ValueError("Error in syntax")
+    last = token[0]
+    #如果Token为操作符，则保存为操作符节点，把前一个整数Token作为左子节点
+    if :
+      pass
