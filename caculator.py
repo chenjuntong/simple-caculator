@@ -125,3 +125,21 @@ def caculate(nbo):
   else:
     raise ValueError("Wrong operator")
 
+# 判断是否只输入了一个整数
+def evaluate(node):
+  # 如果表达式中只有一个整数，则直接返回值
+  if isinstance(node,IntNode):
+    return node.value
+  else:
+    return caculate(node)
+
+# 主程序，输入输出处理
+if __name__ == '__main__':
+  # 获取输入字符串
+  input = raw_input('Input:')
+  # 从输入字符串获得Token列表
+  tokens = tokenize(input)
+  # 从Token列表生成表达式树
+  node = parse(tokens)
+  # 遍历计算表达式树并输出结果
+  print("Result:"+str(evaluate(node)))
