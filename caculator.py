@@ -101,5 +101,27 @@ def parse(tokens):
       raise ValueError("Error in syntax")
     last = token[0]
     #如果Token为操作符，则保存为操作符节点，把前一个整数Token作为左子节点
-    if :
-      pass
+    if token[0] == 'ope':
+      nbo = BinaryOpNode(token[1])
+      nob.left = node
+      #如果Token为整数，则将该Token保存为右节点
+    if token[0] == 'int':
+      nbo.right = IntNode(token[1])
+      node = nbo
+  return node
+
+# 采用递归的方法计算表达式二叉树的值
+def caculate(nbo):
+  # 如果左节点是二叉树，则先计算左节点二叉树的值
+  if isinstance(nbo.left,BinaryOpNode):
+    leftval = caculate(nbo.left)
+  else:
+    leftval = nbo.left.value
+  # 根据操作符节点是加还是减计算
+  if nbo.kind == '-':
+    return leftval - nbo.right.value
+  elif nbo.kind == '+':
+    return leftval + nbo.right.value
+  else:
+    raise ValueError("Wrong operator")
+
