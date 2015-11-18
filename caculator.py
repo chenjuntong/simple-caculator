@@ -103,7 +103,7 @@ def parse(tokens):
     #如果Token为操作符，则保存为操作符节点，把前一个整数Token作为左子节点
     if token[0] == 'ope':
       nbo = BinaryOpNode(token[1])
-      nob.left = node
+      nbo.left = node
       #如果Token为整数，则将该Token保存为右节点
     if token[0] == 'int':
       nbo.right = IntNode(token[1])
@@ -136,7 +136,7 @@ def evaluate(node):
 # 主程序，输入输出处理
 if __name__ == '__main__':
   # 获取输入字符串
-  input = raw_input('Input:')
+  input = input('Input:')
   # 从输入字符串获得Token列表
   tokens = tokenize(input)
   # 从Token列表生成表达式树
