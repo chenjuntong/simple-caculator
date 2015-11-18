@@ -133,6 +133,7 @@ def evaluate(node):
   else:
     return caculate(node)
 
+
 # 主程序，输入输出处理
 if __name__ == '__main__':
   # 获取输入字符串
