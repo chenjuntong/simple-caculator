@@ -143,4 +143,4 @@ if __name__ == '__main__':
   # 从Token列表生成表达式树
   node = parse(tokens)
   # 遍历计算表达式树并输出结果
-  print("Result is :"+str(evaluate(node)))
+  print("Result:"+str(evaluate(node)))
