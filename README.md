@@ -1,7 +1,7 @@
 # simple caculator
 This is a simple caculator in python &amp; c.
 用Python和C语言实现简易计算器。
-
+![image_1anlctle6vdd14mt1sfm1ak81vre9.png-66.9kB][1]
 ## Pyhton版本
 
 ### 程序分解
@@ -183,4 +183,4 @@ if __name__ == '__main__':
 ```
 
 
-
+  [1]: http://static.zybuluo.com/JuntongCHEN/5gk1yw4gxh5kywmkuxblh69l/image_1anlctle6vdd14mt1sfm1ak81vre9.png
