@@ -4,7 +4,7 @@ This is a simple caculator in python &amp; c.
 
 ![image_1anlctle6vdd14mt1sfm1ak81vre9.png-66.9kB][1]
 
-## Pyhton版本
+## Python版本
 
 ### 程序分解
 1. 输入表达式：使用`raw_input`获得输入字符串
