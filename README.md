@@ -3,7 +3,7 @@ This is a simple caculator in python &amp; c.
 用Python和C语言实现简易计算器。
 
 ![0](http://ww3.sinaimg.cn/large/6ccda21fjw1f6orfg7gnoj20s40e1764.jpg)
-![image_1anlctle6vdd14mt1sfm1ak81vre9.png-66.9kB][1]
+![1](http://ww4.sinaimg.cn/large/6ccda21fjw1f6ra6o3puqj20pz075wgw.jpg)
 
 ## Python版本
 
@@ -185,5 +185,3 @@ if __name__ == '__main__':
   print("Result:"+str(evaluate(node)))
 ```
 
-
-  [1]: http://static.zybuluo.com/JuntongCHEN/5gk1yw4gxh5kywmkuxblh69l/image_1anlctle6vdd14mt1sfm1ak81vre9.png
